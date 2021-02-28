@@ -1,0 +1,8 @@
+*/node-modules*
+*/.vscode*
+*/Node-Red*
+*/appi-tf*
+*/mysql-scripts*
+example.json
+he-events.json
+he-logs.json
