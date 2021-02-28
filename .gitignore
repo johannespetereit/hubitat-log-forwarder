@@ -119,3 +119,4 @@ dist
 .vscode/*
 tf-plan.tar.gz
 example.json
+get-token.ps1
