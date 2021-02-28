@@ -5,7 +5,7 @@
     "webserver": {
       "enable": true,
       "port": 80,
-      "maker_api_url": "[maker_api_url] Must be the maker api url for getting the list of devices."
+      "maker_api_base_url": "[maker_api_base_url] Must be the maker api url for getting the list of devices (without accesstoken, the access token must be set in the env variable HUBITAT_MAKER_API_TOKEN."
     }
   },
   "hub": {

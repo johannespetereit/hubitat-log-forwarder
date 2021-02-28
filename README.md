@@ -24,7 +24,7 @@ Installation:
    "webserver": {
       "enable": true,
       "port": 80,
-      "maker_api_url": "[YOUR MAKER API URL]"
+      "maker_api_base_url": "[YOUR MAKER API URL] -> (terminating with '?'__without accesstoken__, the access token must be set in the env variable HUBITAT_MAKER_API_TOKEN."
     }
 ```
 You need to make sure that your Maker API URL is populated. In HE, you'll want to make sure that any devices you want logged are selected in Maker API.

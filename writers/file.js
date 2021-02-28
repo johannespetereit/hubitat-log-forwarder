@@ -8,6 +8,5 @@ module.exports = {
             if (err)
                 throw err;
         });
-        if(dest.debug) debug.write("Wrote to ", writer.path);
     }
 }

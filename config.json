@@ -5,26 +5,26 @@
     "webserver": {
       "enable": true,
       "port": 8887,
-      "maker_api_url": "http://192.168.1.110/apps/api/37/devices?access_token=da46a344-ef7e-43e7-a448-a2e698eb9cb4"
+      "maker_api_base_url": "http://hubitat.fritz.box/apps/api/37/devices?access_token="
     }
   },
   "hub": {
-    "hub_host": "192.168.1.110",
+    "hub_host": "hubitat.fritz.box",
     "events": {
         "enabled": true,
         "subscriptions": [ ],
         "socket_name": "eventsocket",
         "writers": {
             "console" : {
-                "enable" : false,
-                "debug" : false,
+                "enable" : true,
+                "debug" : true,
                 "module": "./writers/console.js"
             },
             "file" : {
-                "enable": false,
+                "enable": true,
                 "debug" : false,
                 "module": "./writers/file.js",
-                "path": "he-events.log"
+                "path": "he-events.json"
             },
             "csv" : {
                 "enable": false,
@@ -84,7 +84,7 @@
                 ]
             },
             "mysql" : {
-                "enable": true,
+                "enable": false,
                 "debug" : false,
                 "module": "./writers/mysql.js",
                 "host": "192.168.1.100",
@@ -110,7 +110,7 @@
                 "postSqlStatements": null
             },
             "influxdb" : {
-                "enable": true,
+                "enable": false,
                 "debug" : true,
                 "module": "./writers/influxdb.js",
                 "host": "192.168.1.100",
@@ -185,15 +185,21 @@
       "socket_name": "logsocket",
       "writers": {
         "console" : {
-          "enable" : false,
-          "debug" : false,
+          "enable" : true,
+          "debug" : true,
           "module": "./writers/console.js"
         },
+        "appi" : {
+          "enable" : true,
+          "debug" : true,
+          "module": "./writers/appi.js",
+          "path": "appi.json"
+        },
         "file" : {
-          "enable": false,
+          "enable": true,
           "debug" : false,
           "module": "./writers/file.js",
-          "path": "he-logs.log"
+          "path": "he-logs.json"
         },
         "csv" : {
           "enable": false,
@@ -229,7 +235,7 @@
           ]
         },
         "mysql" : {
-          "enable": true,
+          "enable": false,
           "debug" : false,
           "module": "./writers/mysql.js",
           "host": "192.168.1.100",

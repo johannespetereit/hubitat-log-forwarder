@@ -1,0 +1,4 @@
+resource_group_name  = "petereit"
+storage_account_name = "tfstatejope"
+container_name       = "tfstate"
+key                  = "hubitat-appi.tfstate"
