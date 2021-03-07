@@ -90,7 +90,7 @@ else {
 
         ws.on('open', function (err) {
             if (err) throw err;
-            if (global.debug) console.log("Waiting on events");
+            if (global.debug) console.log("Waiting for system events");
         });
 
         ws.on('message', function incoming(data) {
@@ -120,7 +120,7 @@ else {
         ws.on('message', function incoming(data) {
             var out_data = getLogData(JSON.parse(data));
 
-            if (global.debug) console.log("Waiting on events");
+            if (global.debug) console.log("Waiting for log events");
 
             var writers = logs.writers;
 

@@ -21,7 +21,7 @@
                 "module": "./writers/console.js"
             },
             "file" : {
-                "enable": true,
+                "enable": false,
                 "debug" : false,
                 "module": "./writers/file.js",
                 "path": "he-events.json"
@@ -196,7 +196,7 @@
           "path": "appi.json"
         },
         "file" : {
-          "enable": true,
+          "enable": false,
           "debug" : false,
           "module": "./writers/file.js",
           "path": "he-logs.json"

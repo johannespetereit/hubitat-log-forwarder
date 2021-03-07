@@ -17,10 +17,10 @@ module.exports = {
         if (data.level) {
             telemetry.trackTrace({ message: data.msg, severity: mapSeverity(data.level), properties: data });
         }
-        fs.appendFile(writer.path, JSON.stringify(data), function (err) {
-            if (err)
-                throw err;
-        });
+        // fs.appendFile(writer.path, JSON.stringify(data), function (err) {
+            // if (err)
+                // throw err;
+        // });
     }
 }
 function mapSeverity(hubitatSeverity) {
@@ -38,7 +38,11 @@ function mapSeverity(hubitatSeverity) {
     }
 }
 function setCloudRole(envelope, context) {
+    console.log("NEW APPI Message");
+    console.log("Context:");
     console.log(JSON.stringify(context));
+    console.log("Envelope:");
+    console.log(JSON.stringify(envelope));
     if (envelope.data.baseType === "MessageData") {
         envelope.tags["ai.cloud.roleInstance"] = "Hubitat"
         console.log(JSON.stringify(envelope));
